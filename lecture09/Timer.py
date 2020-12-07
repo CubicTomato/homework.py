@@ -8,7 +8,7 @@ class timer:
 
     def __call__(self, *args, **kargs):
         self.start = time.time()
-        self.F(*args)
+        self.F(*args, **kargs)
         self.time = int((time.time() - self.start) * 10000) / 10000
         return print('time = ' + str(self.time) + ' s')
 
